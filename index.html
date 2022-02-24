@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="lib/nerdamer/all.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+   
+    .main {
+      display: flex;
+      margin: 30px;
+    }
+    .input {
+      width: 500px;
+      height: 40px;
+      border: 1px solid black;
+      border-radius: 5px;
+      outline: none;
+      font-size: 15px;
+      background-color: rgb(237, 230, 230);
+      padding-top: 10px;
+      float: right;
+    }
+    .numbers {
+      width: 121px;
+      height: 30px;
+      background-color: black;
+      color: white;
+      border: 0.1 solid white;
+      border: 1px solid black;
+      border-radius: 5px;
+      margin: 1px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .res {
+      width: 247px;
+      height: 30px;
+      margin: 1px;
+      background-color: black;
+      border-radius: 5px;
+      color: white;
+      border: 0.1 solid white;
+      font-weight: bold;
+    }
+    .css{
+      width: 165px;
+      height: 30px;
+      background-color: black;
+      border-radius: 5px;
+      color: white;
+    }
+    .equal:hover{
+      background-color: rgb(20, 18, 18);
+    }
+    /* input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+  </style>
+
+  <body>
+    <h1>scientific calculator </h1>
+
+    <div class="main">
+      <div class="container">
+        <input class="input" type="text"  name="" id="result"  onkeypress="check()"/> <br />
+        <div>
+          <button class="res" onclick="clickradian()">radian</button>
+          <button
+            class="res"
+            style="background-color: rgb(70, 69, 69); color: white"
+            onclick="clickdegree()"
+          >
+            degree
+          </button>
+        </div>
+        <button class="numbers" onclick="dis('7')">7</button>
+        <button class="numbers" onclick="dis('8')">8</button>
+        <button class="numbers" onclick="dis('9')">9</button>
+        <button class="numbers" onclick="dis('/')">/</button>
+
+        <br />
+        <button class="numbers" onclick="dis('4')">4</button>
+        <button class="numbers" onclick="dis('5')">5</button>
+        <button class="numbers" onclick="dis('6')">6</button>
+        <button class="numbers" onclick="dis('*')">*</button>
+
+        <br />
+        <button class="numbers" onclick="dis('1')">1</button>
+        <button class="numbers" onclick="dis('2')">2</button>
+        <button class="numbers" onclick="dis('3')">3</button>
+        <button class="numbers" onclick="dis('(')">(</button>
+
+        <br />
+        <button class="numbers" onclick="dis('0')">0</button>
+        <button class="numbers" onclick="dis('.')">.</button>
+        <button class="numbers" onclick="ac()">AC</button>
+        <button class="numbers" onclick="dis(')')">)</button>
+
+        <br />
+        <button class="numbers" onclick="dis('+')">+</button>
+        <button class="numbers" onclick="dis('%')">%</button>
+        <button class="numbers" onclick="dis('-')">-</button>
+        <button class="numbers" onclick="c()">⬅</button>
+
+        <div>
+          <button class="css equal"  onclick="res()">=</button>
+          <button class="css"  onclick="resin('resin(')">resin</button>
+          <button class="css"  onclick="pi(Math.PI)">π</button>
+
+        </div>
+        <div id="r">
+          <button class="res" onclick="sin('sin(')">Sin</button>
+          <button class="res" onclick="cos('cos(')">Cos</button>
+
+        </div>
+        <div id="d" style="display: none">
+          <button
+            class="res"
+            style="background-color: rgb(70, 69, 69); color: white"
+            onclick="dsin('dsin(')"
+          >
+            Sin
+          </button>
+          <button
+            class="res"
+            style="background-color: rgb(70, 69, 69); color: white"
+            onclick="dcos('dcos(')"
+          >
+            Cos
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
